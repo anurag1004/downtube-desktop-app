@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DownTube.Live</title>
+        <meta name="robots" content="index,follow" />
+        <meta name="google-site-verification" content="xXiUrdvIV3nwVcAcS_vgZJNYbaWYW72ml67EHlFv9Qg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="DownTube.Live Download YouTube Videos and mp3 for free, High quality youtube videos and mp3 audios, full-hd sound and video.">
+        <link rel="stylesheet" href="/css/uikit.min.css" />
+        <link rel='stylesheet' href="/css/main.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+        <script src="/js/uikit.min.js" ></script>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+        <script src="/js/main.js"></script>
+    </head>
+    <body>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container uk-margin" uk-navbar>
+            <div class="uk-navbar-center">
+        
+                <div class="uk-navbar-center-left"></div>
+                <div></div>
+                <a class="uk-navbar-item uk-logo" id='domain'style="font-family: 'Monoton', cursive;"; href="#">DownTube.Live</a>
+                <div></div>
+            </div>
+        </nav>
+    </div>
+ 
+
+<div class="uk-container">
+    <div style="text-align: center;" class="uk-animation-fade">
+    <h2 style="font-family:'Lobster',cursive;text-shadow: 2px 2px 1px rgba(0,0,155,0.2)">Download YouTube Videos and Musics For Free</h2>
+    </div>  
+    <input id='link'class="uk-input" name="url" placeholder="Paste the URL here..." required>
+           <div id='convert_div' style="text-align: center;">
+            <a style='margin: 10px;'id='convert'class="uk-button uk-button-primary heartbeat">Convert</a>
+            <div class="uk-flex uk-flex-center">
+                <div></div>
+                <div>
+                    <a class="uk-button uk-button-default" href="/about">About</a>
+                </div>
+                <div></div>
+            </div>
+           </div>
+           <div class="uk-align-center" style="text-align: center;">
+               <h5 style='text-align: center;'id='message'></h5>
+           </div>
+           <div style='margin: 10px;'id='video-info'class="uk-grid uk-flex-center">
+              
+                  <div class="uk-card uk-card-small uk-card-default">
+                        <div class="uk-card-header">
+                            <div class="uk-grid-small uk-flex uk-flex-center">
+                                <div></div>
+                                <div>
+                                    <div id='bigImage'class="uk-background-primary uk-box-shadow-bottom uk-box-shadow-small uk-flex-center" >
+                                        <div></div>
+                                        <div>
+                                            <div  class="uk-overflow-hidden" >
+                                                 <img id='thumbnail'class="uk-blend-multiply uk-border" sizes="(min-width: 350px) 650px, 100vw" width="650" height="433" src="" alt="Blend Multiply" uk-img>
+                                            </div>
+                                            <div class="uk-position-center">
+                                                <p id='author'style='color:white'class="uk-h3 uk-margin-remove"></p>
+                                            </div>
+                                        
+                                        </div>
+                                        <div></div>
+                                       
+                                     </div>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div style='margin-top: 45px; text-align: center;'class="uk-width-expand">
+                                <h5 id='title'class="uk-card-title uk-margin-remove-bottom"></h5>
+                            </div>
+                        <div class="uk-card-body">
+                            <p id='download-options'>
+                                <div>
+                                    <table class="uk-table uk-table-middle uk-table-divider">
+                                        <thead>
+                                            <tr>
+                                                <th class="uk-width-small">Quality</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>    
+                            </p>
+                        </div>
+                        <div class="uk-card-footer">
+                            <a href="#" id='readmore'class="uk-button uk-button-text">Go to Artist!</a>
+                        </div>
+                        </div>
+                  </div>
+             
+            </div> 
+</div>
+
+    </body>
+</html>

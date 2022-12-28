@@ -1,0 +1,41 @@
+html,body{
+height: 100%;
+margin: 0;
+}
+#domain{
+    font-size: 42px;
+  }
+.about span{
+    font-size: 30px;
+    font-weight: 700;
+}
+.uk-navbar-container{
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2)
+    }
+.uk-card-body{
+    display: table-cell; 
+    vertical-align: middle; 
+    text-align: center; 
+}
+  @media(max-width: 410px){
+    #domain{
+      font-size: 33px;
+    }
+  }
+  @media(max-width: 330px){
+    #domain{
+      font-size: 30px;
+    }
+  }
+  #me{
+    max-width: 100%;
+    height: auto;
+    width: 321px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 42px rgba(0,0,0,0.4);
+  }
+  .uk-card{
+    box-shadow: 0 4px 13px rgba(0,0,0,0.3);
+    border-radius: 10px;
+
+  }
