@@ -16,4 +16,5 @@ On excuting the above command the app will load in a browser window using electr
 - To run just the express server use
   > npm run express
 <br/>
+
 #### Note: after installing the app using msi installer, run it in admin mode
