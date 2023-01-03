@@ -45,7 +45,11 @@ $(document).ready(()=>{
                         $(downloadStatus).removeClass('tracking-out-contract')
                         $(downloadStatus).addClass('tracking-in-expand')
                         $(downloadStatus).text('Merging audio and video... Please wait')
-                        $('#random_facts').append(`<br/> <a href='/'>Go back to home</a>`)
+                        $('#random_facts').append(`<p>Redirecting to download page...</p>`)
+                        // redirect to home
+                        setTimeout(()=>{
+                            window.location.href = '/'
+                        })
                     },1000)
                     
     

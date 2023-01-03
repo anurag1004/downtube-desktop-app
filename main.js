@@ -7,11 +7,16 @@ let mainWindow;
 function createWindow () {
 
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1270,
+    height: 720,
+    // fix the window size
+    resizable: false,
+    // disable the default menu bar
+    autoHideMenuBar: true,
     icon: __dirname + '/icons/youtube.ico',
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      devTools: false
     }
   })
 

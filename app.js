@@ -62,7 +62,16 @@ app.use(function (err, req, res, next) {
 });
 //REST APIs
 app.get("/", (req, res) => {
-  res.render("index");
+  // calculate size of temp_vid folder
+  const folder = "./temp_vid";
+  let totalSize = 0;
+  fs.readdirSync(folder).forEach((file) => {
+    const stats = fs.statSync(path.join(folder, file));
+    totalSize += stats.size;
+  })
+  // convert bytes to mb
+  totalSize = (totalSize / 1000000).toFixed(2);
+  res.render("index",{size:totalSize});
 });
 app.get("/about", (req, res) => {
   res.render("about");
@@ -240,22 +249,6 @@ app.get("/downloadit", (req, res) => {
               else {
                 console.log("Output file removed");
                 record_downloads(req);
-
-                //remove file from untransfered.json
-                // const untransfered_new = require('./untransfered.json')
-                // let pendingObjs  =  untransfered_new.locations;
-                // pendingObjs = pendingObjs.filter((obj)=> obj.file!=`./temp_vid/${decoded._id}.mp4`)
-                // const newjson  = {
-                //   locations: pendingObjs
-                // }
-                // console.log(pendingObjs)
-                // fs.writeFile('./untransfered.json',JSON.stringify(newjson),err=>{
-                //     if(err) console.log(err)
-                //     else{
-                //         console.log("file stamp removed from untransfered.json...\n")
-
-                //     }
-                // })
               }
             });
           });
@@ -263,6 +256,18 @@ app.get("/downloadit", (req, res) => {
     }
   });
 });
+app.delete("/temp",(req, res)=>{
+  // delete temp files under temp folder
+  const dir = './temp_vid'
+  fs.readdir(dir, (err, files) => {
+    if (err) throw err;
+  
+    for (const file of files) {
+      fs.unlink(path.join(dir, file), err => {});
+    }
+    res.status(200).send("Deleted all files in temp folder")
+  })
+})
 app.get("*", (req, res) => {
   res.redirect("/");
 });

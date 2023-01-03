@@ -113,21 +113,19 @@ $(document).ready(()=>{
             console.log("URL is empty!!")
         }
     })
-    // $('table').on('click','.download_video',(e)=>{
-    //     const resolutions = e.target.attributes.resolutions.value.toString();
-    //     const from = $(inputUrl).val().trim()
-    //     const url = `/download?quality=${resolutions}&from=${from}`;
-    //     $.get(url,(response)=>{
-    //         console.log(`download request sent to ${url}`)
-    //     });
-    //     // $('.download_video').each(event=>{
-    //     //     console.log(event.target)
-    //     //     if(event.target === target){
-    //     //         console.log(target)
-    //     //     }
-    //     // })
-    //     // $( "li.item-a" ).parent().css( "background-color", "red" );    
-    // })
-
-    
+    $('#deleteBtn').on('click',(e)=>{
+        // delete request to serverat /temp
+        $.ajax({
+            url:'/temp',
+            type:'DELETE',
+            success:(response)=>{
+                console.log(response)
+                // update text for id cacheSize
+                $('#cacheSize').text('0')
+            },
+            error:(err)=>{
+                console.log(err)
+            }
+        })
+    })
 })
