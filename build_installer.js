@@ -13,7 +13,7 @@ const msiCreator = new MSICreator({
     exe: 'ytd',
     name: 'downtube',
     manufacturer: 'AxDu',
-    version: '1.0.0',
+    version: '1.0.1',
     icon:'./icons/youtube.ico',
 
     // Configure installer User Interface
